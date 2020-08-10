@@ -22,15 +22,15 @@
                     <a href="?settings" class="selected">Settings</a>
                 </div>
 				<div class="page-title">Settings</div>
-                <?php 
-					if (isset($status)) { 
-						echo "<p>" . $status . "</p>";
-						if ($status == "Settings failed to save, check your file permissions") {
-							echo "<p><b>Manual Output</b></p>";
-							echo "<textarea id=\"settings-output-box\">" . $this->vars['settings_output'] . "</textarea>";
+                <?php
+                    if (isset($status)) {
+                        echo '<p>'.$status.'</p>';
+                        if ($status == 'Settings failed to save, check your file permissions') {
+                            echo '<p><b>Manual Output</b></p>';
+                            echo '<textarea id="settings-output-box">'.$this->vars['settings_output'].'</textarea>';
                         }
-					} 
-				?>
+                    }
+                ?>
                 <div class="settings-section">
                 	<?php $this->outputSettingsFields(); ?>
                 </div>

@@ -17,33 +17,33 @@
 			<div>
 				<div class="page-title">Pre-setup Check (<a href="">Re-test</a>)</div>
 				<?php
-                if ($this->vars['setup_mode'] == "legacy") {
-				?>
+                if ($this->vars['setup_mode'] == 'legacy') {
+                    ?>
                 <p>
                 	It appears you are upgrading your install of PHPPI from a legacy version. Confirm that 
                     the following tests pass and then continue to make sure that your settings have carried across. If you have any issues feel free to report them at 
                     <a href="http://code.google.com/p/phppi/issues/list" target="_blank">http://code.google.com/p/phppi/issues/list</a>
                 </p>
                 <?php
-				} else if ($this->vars['setup_mode'] == "upgrade") {
-				?>
+                } elseif ($this->vars['setup_mode'] == 'upgrade') {
+                    ?>
                 <p>
-                	It appears you are upgrading your install of PHPPI from version <?php echo $this->vars['installed_version'] . " to " . $this->vars['version']; ?>. Confirm that 
+                	It appears you are upgrading your install of PHPPI from version <?php echo $this->vars['installed_version'].' to '.$this->vars['version']; ?>. Confirm that 
                     the following tests pass and then continue to make sure that your settings have carried across. If you have any issues feel free to report them at 
                     <a href="http://code.google.com/p/phppi/issues/list" target="_blank">http://code.google.com/p/phppi/issues/list</a>
                 </p>
                 <?php
-				} else {
-				?>
+                } else {
+                    ?>
                 <p>
                 	For PHPPI to work correctly all of the following tests must pass. You can continue if you fail a test but some features may not work and the install may fail.
                     If you have any issues feel free to report them at <a href="http://code.google.com/p/phppi/issues/list" target="_blank">http://code.google.com/p/phppi/issues/list</a>
                 </p>
                 <?php
-				}
-				
-				$this->outputChecks(); 
-				?>
+                }
+
+                $this->outputChecks();
+                ?>
 			</div>
             <form method="post"><input name="step_2" type="submit" value="Continue"></form>
 		</div>
