@@ -1,16 +1,18 @@
 <div id="page-title">
 	<div style="float: left;">
-		<?php 
-			if ($this->logoExists()) {
-				$this->showLogo();
-			} else {
-				echo "<div style=\"padding: 10px;\">" . $this->showSiteName(1) . "</div>";
-			}
-		?>
+		<?php
+            if ($this->logoExists()) {
+                $this->showLogo();
+            } else {
+                echo '<div style="padding: 10px;">'.$this->showSiteName(1).'</div>';
+            }
+        ?>
 	</div>
     <div style="clear: both;"></div>
 </div>
-<?php if ($this->noticeExists()) { echo '<div id="page-notice">' . $this->showNotice(1) . '</div>'; } ?>
+<?php if ($this->noticeExists()) {
+            echo '<div id="page-notice">'.$this->showNotice(1).'</div>';
+        } ?>
 <div class="nav-bar">
 	<ul>
 		<li class="nav-prev"><a href="javascript: history.back();"><img src="<?php $this->showThemeURL(0); ?>images/prev.png"></a></li>

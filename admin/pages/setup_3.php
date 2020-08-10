@@ -17,8 +17,8 @@
 			<div>
 				<div class="page-title">Finish</div>
 				<?php
-                if ($this->vars['settings_output'] !== "") {
-				?>
+                if ($this->vars['settings_output'] !== '') {
+                    ?>
                 <p>
                 	Setup could not write your settings to the phppi_settings.php file, make sure you've passed all the tests on the first step and try again. Otherwise you can create a
                     file called phppi_settings.php with the following content and save it to your PHPPI folder (example: installfolder/phppi/phppi_settings.php). Also make sure that your version.txt file
@@ -34,13 +34,13 @@
                 	<textarea id="settings-output-box"><?php echo $this->vars['settings_output']; ?></textarea>
                 </div>
                 <?php
-				} else {
-				?>
+                } else {
+                    ?>
                 <p>Setup has saved your settings successfully. Click Finish to start using PHPPI.</p>
                 <p>To access the admin section of PHPPI visit the following URL - <a href="<?php echo $this->getURL(); ?>" target="_blank"><?php echo $this->getURL(); ?></a></p>
                 <?php
-				}
-				?>
+                }
+                ?>
 			</div>
             <form method="post" action=""><input name="finish" type="submit" value="Finish"></form>
 		</div>

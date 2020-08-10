@@ -21,7 +21,11 @@
                     <a href="?settings">Settings</a>
                 </div>
 				<div class="page-title">Status</div>
-                <p>Installed Version: <?php echo $this->vars['installed_version']; $temp_update = $this->checkUpdate(); if ($temp_update !== false) { echo " (<a href=\"" . $temp_update[1] . "\" target=\"_blank\">" . $temp_update[0] . " is available for update</a>)"; } else { echo " (No updates available)"; } ?></p>
+                <p>Installed Version: <?php echo $this->vars['installed_version']; $temp_update = $this->checkUpdate(); if ($temp_update !== false) {
+    echo ' (<a href="'.$temp_update[1].'" target="_blank">'.$temp_update[0].' is available for update</a>)';
+} else {
+    echo ' (No updates available)';
+} ?></p>
 			</div>
 		</div>
 	</div>

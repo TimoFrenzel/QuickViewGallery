@@ -16,7 +16,9 @@
 			</div>
 			<div>
 				<div class="page-title">Password</div>
-                <?php if ($error !== "" && isset($_POST['login'])) { echo "<p>" . $error . "</p>"; } ?>
+                <?php if ($error !== '' && isset($_POST['login'])) {
+    echo '<p>'.$error.'</p>';
+} ?>
 				<form method="post" action=""><div class="password-box"><input type="password" name="password_field"><input name="login" type="submit" value="Login"></div></form>
 			</div>
     	</div>

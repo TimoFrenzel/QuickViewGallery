@@ -17,20 +17,20 @@
 			<div>
 				<div class="page-title">Settings</div>
 				<?php
-                if ($this->vars['setup_mode'] == "legacy") {
-				?>
+                if ($this->vars['setup_mode'] == 'legacy') {
+                    ?>
                 <p>Settings have been retrieved from a legacy version of PHPPI, make sure these are correct before continuing</p>
                 <?php
-				} else if ($this->vars['setup_mode'] == "upgrade") {
-				?>
+                } elseif ($this->vars['setup_mode'] == 'upgrade') {
+                    ?>
                 <p>Settings have been retrieved from an earlier version of PHPPI, make sure these are correct before continuing</p>
                 <?php
-				} else {
-				?>
+                } else {
+                    ?>
                 <p>Change the settings to how you'd like PHPPI to run, these can be changed later if you make a mistake.</p>
                 <?php
-				}
-				?>
+                }
+                ?>
                 <form method="post" action="">
                 <div class="settings-section">
                 	<?php $this->outputSettingsFields(); ?>
